@@ -16,6 +16,7 @@
 #WHOIS: whois data for the payload IP address
 #Notes: misc notes.
 
+#8/22/14
 Pitcher: 96.8.126.97
 Catcher: 108.61.91.211
 Nslookup (pitcher): s1-dallas.cloudhostservers.com.

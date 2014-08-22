@@ -1,4 +1,5 @@
 #This is a list of IP addresses extracted from the RFI_attacks.txt file
+#8/22/14
 96.8.126.97
 108.61.91.211
 217.174.250.46
