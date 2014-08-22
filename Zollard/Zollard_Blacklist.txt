@@ -1,0 +1,36 @@
+#Zollard Botnet
+#This is a list of hosts that appear to be members of the Zollard Botnet.
+#Zollard targets internet-enabled, embedded devices; for example, SOHO routers among other devices.
+#All Zollard hosts have web servers listening on 58455/tcp; in order to expand the botnet, one of the attack techniques used is CVE-2012-1823 (Reference: http://eindbazen.net/2012/05/php-cgi-advisory-cve-2012-1823/). If successful, the exploit calls back to the attacking server on 58455/tcp to download a payload for the appropriate CPU architecture for the embedded device:
+#/x86
+#/arm
+#/ppc
+#/mips
+#/mipsel
+#/arm
+#/armeabi
+#/nodes
+#/sig
+#This is a list of IP addresses I have observed serving this malware.
+#Remediation: Block outbound TCP connections to 58455/tcp, blacklist connections to these hosts
+#8/22/14:
+179.106.182.172
+113.22.111.192
+73.36.183.54
+200.126.193.34
+222.114.168.73
+221.233.33.151
+190.14.32.196
+121.60.76.81
+115.64.154.230
+110.47.116.25
+83.19.144.235
+75.99.4.115
+84.91.25.101
+181.55.254.250
+175.209.147.112
+69.62.242.10
+70.90.57.189
+83.144.84.110
+92.126.206.229
+95.245.72.63
