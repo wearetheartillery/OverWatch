@@ -1,0 +1,22 @@
+#BossaBot Tracker
+#BossaBot is something that was just recently caught out in the wild. It's a binary Linux IRC backdoor.
+#I'm choosing to take this seriously, because the first posting I found regarding this bot was on 8/26. I saw 9 hits against our IP space on 8/27 from a single IP address, with more hits since then. This is less than a week's time.
+#See: http://www.malekal.com/2014/08/26/bossabotv2-another-linux-backdoor-irc/
+#This is a list of bots I've seen from 8/26 onward attacking my IP space.
+#8/29/14:
+201.22.56.71
+200.80.241.92
+46.29.252.216
+46.22.128.196
+212.235.186.228
+212.233.125.54
+174.36.7.10
+200.45.249.216
+142.176.177.82
+105.237.69.241
+105.237.54.82
+23.21.90.253
+23.23.222.215
+23.23.211.99
+46.137.90.221
+87.229.163.22
