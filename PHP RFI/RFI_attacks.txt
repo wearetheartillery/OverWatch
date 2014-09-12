@@ -250,7 +250,7 @@ Description: Not unlike alihack, this is a "touch" to see if a server is vulnera
 Notes:
 -Also not unlike alihack, has a fixation towards the energy sector.
 
-8/22
+#8/29/14
 
 Pitcher: 84.200.75.194
 Catcher: 84.200.75.194
