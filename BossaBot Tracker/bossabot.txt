@@ -1,9 +1,13 @@
 #BossaBot Tracker
+# References:
+# http://wearetheartillery.blogspot.com/2014/08/bossabot-new-irc-backdoor-running.html
+# http://wearetheartillery.blogspot.com/2014/09/mystery-meatloaf-not-so-advanced-but.html
+# http://www.malekal.com/2014/08/26/bossabotv2-another-linux-backdoor-irc/
 #BossaBot is something that was just recently caught out in the wild. It's a binary Linux IRC backdoor.
 #I'm choosing to take this seriously, because the first posting I found regarding this bot was on 8/26. I saw 9 hits against our IP space on 8/27 from a single IP address, with more hits since then. This is less than a week's time.
-#See: http://www.malekal.com/2014/08/26/bossabotv2-another-linux-backdoor-irc/
 #This is a list of bots I've seen from 8/26 onward attacking my IP space.
 #8/29/14:
+
 201.22.56.71
 200.80.241.92
 46.29.252.216
@@ -23,6 +27,7 @@
 
 #9/12/14
 #I cannot say for certain that these systems are hosting/throwing exploits to spread "BOSSABOT" But I know they're throwing PHP RFI attacks and spreading a binary IRC botnet payload with PHP RFI spreader capability embedded.
+#Update: 9/22/14 - definitely related to bossabot, per research with MalwareMustDie
 
 200.43.227.51 
 200.183.132.2
@@ -127,7 +132,6 @@
 213.136.59.149
 213.73.31.13
 213.33.66.205
-213.5.67.223
 213.5.67.223
 212.129.6.25
 212.58.108.218
@@ -338,3 +342,90 @@
 5.61.39.40
 5.2.91.19
 2.119.3.10
+
+#9/23/14:
+
+111.178.146.46
+1.234.70.84
+184.73.234.169
+218.200.153.138
+218.64.245.130
+147.32.88.7
+77.37.11.213
+118.98.235.40
+150.185.136.226
+83.234.149.108
+134.169.104.10
+200.80.241.92
+37.187.26.104
+37.187.159.117
+46.137.212.38
+62.156.187.20
+66.244.148.225
+174.142.85.17
+50.56.120.175
+66.132.132.51
+75.125.164.50
+80.218.68.77
+83.141.46.40
+91.225.247.5
+195.246.16.33
+200.127.161.206
+200.159.62.85
+201.77.166.130
+202.158.37.2
+203.172.203.123
+204.15.135.116
+204.232.206.66
+46.242.131.3
+61.19.42.28
+61.91.68.66
+64.79.102.43
+107.182.26.203
+196.215.179.148
+196.215.181.118
+198.175.228.43
+200.43.227.51
+200.57.117.103
+202.29.232.139
+202.134.5.130
+202.143.141.246
+202.238.192.39
+212.58.108.218
+213.33.66.205
+216.55.160.135
+27.50.83.97
+31.186.11.250
+31.196.84.131
+41.228.38.37
+46.252.152.47
+50.19.105.139
+200.159.62.85
+204.15.135.116
+64.79.102.43
+195.122.242.104
+194.14.0.66
+190.74.116.124
+188.190.98.48
+187.23.195.120
+178.127.203.108
+178.33.234.208
+150.140.185.238
+129.89.149.210
+117.239.68.18
+109.200.4.75
+93.84.113.19
+91.123.193.10
+87.57.35.26
+83.242.151.116
+80.196.48.53
+2.119.3.10
+24.50.199.68
+37.228.135.83
+41.228.1.253
+54.87.47.195
+64.250.233.69
+77.252.52.131
+79.41.233.124
+80.83.129.90
+129.89.149.210

