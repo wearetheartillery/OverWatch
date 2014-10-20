@@ -844,6 +844,8 @@ Notes:
 -Not really subtle. "bot.pl"
 -Also sends back a reverse shell to 192.13.140.202 on port 3133
 
+#10/3/14
+
 Pitcher: 95.141.37.112
 Catcher: 89.33.193.10
 Nslookup (pitcher): 112-37.141.95.serverdedicati.seflow.it.
@@ -904,6 +906,85 @@ NSlookup:
 WHOIS:
 Notes:
 
+Pitcher: 218.26.180.194
+Catcher: 218.29.162.162
+Nslookup (pitcher):
+WHOIS (pitcher):
+NSlookup (catcher):
+WHOIS (catcher):
+Payload:
+Description:
+Server:
+Port:
+Channel:
+NSlookup:
+WHOIS:
+Notes:
+
+#10/20/14
+
+Pitcher: 50.60.142.34
+Catcher: 184.171.247.165
+Nslookup (pitcher): server.thetechsolgroup.com
+WHOIS (pitcher):
+50.60.0.0/15
+FORTRESSITX
+US
+abuse@fortressitx.com
+AS25653
+NSlookup (catcher): reverhost.com
+WHOIS (catcher):
+184.171.247.0/24
+DimeHost
+US
+abuse@comforthost.net
+Payload: wget http://184.171.247.165/jux
+Description: perlbot
+Server: 64.235.56.228
+Port: 8443
+Channel: #bot
+NSlookup: lasvegas-nv-datacenter.com
+WHOIS:
+64.235.32.0/19
+PremiaNet
+US
+noc@premianet.com
+support@premianet.com
+Notes:
+-bot channel was dead when I checked it. payload still exists however.
+
+Pitcher: 91.209.192.252
+Catcher: braceland.nl
+Nslookup (pitcher): xenmaster34.drecomm.nl
+WHOIS (pitcher):
+91.209.192.0/24
+Drecomm BV
+NL
+systeembeheer@drecomm.nl
+NSlookup (catcher): 85.214.89.206
+WHOIS (catcher):
+85.214.89.0/24
+Strato AG
+DE
+abuse-server@strato.de
+AS6724
+Payload: wget http://braceland.nl/plm
+Description: perlbot
+Server: 193.28.228.61
+Port: 3303
+Channel: #work
+NSlookup: unlinked.t-n-media.de
+WHOIS:
+193.28.228.0/24
+T-N-Media.de
+DE
+abuse@t-n-media.de
+AS33891
+Notes:
+-300+ bots as 10/20/14 when I live tweeted.
+-other pitchers: 89.136.120.205
+
+
 #Template. CHOOSE YOUR OWN ADVENTURE!
 Pitcher:
 Catcher:
@@ -919,4 +1000,3 @@ Channel:
 NSlookup:
 WHOIS:
 Notes:
-

